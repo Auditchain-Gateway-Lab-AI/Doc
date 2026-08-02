@@ -6,9 +6,6 @@ colorSchema: light
 transition: slide-left
 aspectRatio: 16/10
 title: AuditChain Gateway Progress Report
----
-
----
 src: ./slides/cover.md
 ---
 
