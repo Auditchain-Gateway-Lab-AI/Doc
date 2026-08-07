@@ -1,55 +1,75 @@
 ---
-layout: center
-class: text-center
-transition: slide-up
+layout: default
+transition: slide-left
 ---
 
-<!-- SLIDE 6: Next Steps -->
-<div class="max-w-4xl mx-auto mb-8 text-center">
-  <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Roadmap & Next Steps</span>
-  <h1 class="text-3xl font-extrabold text-slate-900 mt-4">Target & Rencana Pengembangan Selanjutnya</h1>
+<!-- Footer -->
+<div class="absolute bottom-6 left-10 flex items-center space-x-2 text-xs text-slate-500 font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#00285d]"></span>
+<span>AuditChain Gateway Protocol</span>
+</div>
+<div class="absolute bottom-6 right-10 text-xs text-slate-400 font-mono">
+Sprint 2026
 </div>
 
-<div class="max-w-4xl mx-auto text-left">
-<div class="bg-white p-6 rounded-xl border border-emerald-200 shadow-sm border-t-4 border-t-emerald-500">
-  <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-100">
-    <h3 class="font-extrabold text-slate-800 text-lg">Prioritas Sprint Berikutnya</h3>
-    <p class="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded border border-emerald-100">MILESTONE Q3</p>
+<!-- SLIDE 6: Roadmap & Next Steps -->
+<div class="pt-2 pb-10 max-w-4xl mx-auto">
+
+<div class="mb-4 text-center">
+<span class="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Roadmap & Next Steps</span>
+<h1 class="text-2xl font-extrabold text-slate-900 mt-1">
+Target & Rencana Pengembangan Selanjutnya
+</h1>
+</div>
+
+<!-- Banner: Solusi Kendala Oracle CDC (Resolved Blocker) -->
+<div class="mb-3 bg-emerald-50/80 p-3 rounded-xl border border-emerald-200 flex items-center justify-between">
+  <div class="flex items-center space-x-2.5 text-xs text-emerald-900 font-medium">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+    <span><strong>Kendala Terselesaikan:</strong> Otomatisasi arsitektur Oracle CDB/PDB & Bypass Schema System pada Debezium Agen.</span>
+  </div>
+  <span class="text-[9px] font-bold font-mono text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-300">RESOLVED</span>
+</div>
+
+<!-- Section: Next Roadmap Targets -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3">
+  <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+    <h3 class="text-xs font-extrabold text-slate-800 flex items-center gap-2">
+      <span class="w-2.5 h-2.5 rounded-full bg-[#00285d]"></span>
+      Prioritas Sprint & Milestone Berikutnya
+    </h3>
+    <span class="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 font-bold">Q3 MILESTONES</span>
   </div>
 
-  <ul class="space-y-4 text-sm text-slate-600">
-    <!-- Item 1 -->
-    <li class="flex items-start space-x-3">
-      <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">1</div>
-      <div>
-        <strong class="text-slate-800 block mb-0.5">Dukungan Multi-Database untuk Klien</strong>
-        <span>Memungkinkan klien untuk mendaftarkan dan menghubungkan lebih dari satu database secara bersamaan (saat ini sistem masih menimpa konfigurasi lama ketika ada database baru yang dikonfigurasi).</span>
+  <div class="grid grid-cols-2 gap-3 text-xs">
+    <div class="flex items-start space-x-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+      <div class="w-5 h-5 rounded-full bg-[#00285d] text-white flex-shrink-0 flex items-center justify-center text-[10px] font-bold mt-0.5">1</div>
+      <div class="space-y-0.5">
+        <strong class="text-slate-800 block text-xs">Uji Coba Load Testing (High Throughput)</strong>
+        <p class="text-[11px] text-slate-600 leading-snug">
+          Pengujian performa, ketahanan latency, dan kapasitas pipeline CDC Kafka-Debezium di bawah lonjakan beban tinggi.
+        </p>
       </div>
-    </li>
-    <!-- Item 2 -->
-    <li class="flex items-start space-x-3">
-      <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">2</div>
-      <div>
-        <strong class="text-slate-800 block mb-0.5">Standarisasi Nomenklatur Aktor</strong>
-        <span>Menyesuaikan dan memperbaiki penamaan aktor/entitas di seluruh sistem agar lebih akurat dan representatif sesuai dengan perannya.</span>
+    </div>
+    <div class="flex items-start space-x-3 bg-slate-50 p-3 rounded-xl border border-slate-200">
+      <div class="w-5 h-5 rounded-full bg-[#00285d] text-white flex-shrink-0 flex items-center justify-center text-[10px] font-bold mt-0.5">2</div>
+      <div class="space-y-0.5">
+        <strong class="text-slate-800 block text-xs">Peluncuran Fitur Analitik Dashboard UI</strong>
+        <p class="text-[11px] text-slate-600 leading-snug">
+          Pengembangan modul grafik statistik transaksi real-time, visualisasi log audit, serta ekspor laporan eksekutif.
+        </p>
       </div>
-    </li>
-    <!-- Item 3 -->
-    <li class="flex items-start space-x-3">
-      <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">3</div>
-      <div>
-        <strong class="text-slate-800 block mb-0.5">Implementasi Auto-Refresh Dashboard</strong>
-        <span>Menerapkan mekanisme pembaruan data secara <em>real-time</em> (tanpa perlu <em>reload</em> halaman manual) pada dashboard setiap kali ada transaksi atau data baru yang masuk.</span>
-      </div>
-    </li>
-    <!-- Item 4 -->
-    <li class="flex items-start space-x-3">
-      <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0 flex items-center justify-center text-xs font-bold mt-0.5">4</div>
-      <div>
-        <strong class="text-slate-800 block mb-0.5">Konsolidasi UI Tabel Data</strong>
-        <span>Menggabungkan antarmuka <em>Verified Data</em> ke dalam satu tabel utama <em>All Transaction History</em> untuk menyederhanakan dan mempermudah <em>monitoring</em> data secara terpusat.</span>
-      </div>
-    </li>
-  </ul>
+    </div>
+  </div>
+
+  <div class="bg-blue-50/60 p-2.5 rounded-lg border border-blue-200 text-center text-xs text-blue-900 font-medium">
+    🎯 <strong>Goal Sprint:</strong> Memastikan kesiapan rilis produksi dengan skalabilitas tinggi & analisis data komprehensif.
+  </div>
 </div>
+
 </div>
+
+
+
+
+

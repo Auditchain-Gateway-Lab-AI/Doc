@@ -26,11 +26,11 @@ src: ./slides/04-dashboard-ui.md
 ---
 
 ---
-src: ./slides/05-platform-specs.md
+src: ./slides/06-roadmap-blockers.md
 ---
 
 ---
-src: ./slides/06-roadmap-blockers.md
+src: ./slides/05-platform-specs.md
 ---
 
 ---

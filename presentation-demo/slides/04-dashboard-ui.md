@@ -1,6 +1,6 @@
 ---
 layout: default
-transition: slide-down
+transition: slide-left
 ---
 
 <!-- Footer -->
@@ -12,56 +12,83 @@ transition: slide-down
 Sprint 2026
 </div>
 
-<!-- SLIDE 4 (VISUAL 3): Audit Monitoring Dashboard UI -->
-<div class="grid grid-cols-12 gap-8 h-full items-center pt-2 pb-10">
+<!-- SLIDE X: Multi-Database Ecosystem -->
+<div class="pt-2 pb-10 max-w-4xl mx-auto">
 
-<div class="col-span-5 space-y-4">
-
-<div>
-<span class="text-[10px] font-bold uppercase tracking-wider text-[#00285d] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">User Interface</span>
-<h1 class="text-2xl font-extrabold text-slate-900 mt-2 leading-tight">
-Antarmuka Monitoring <br/> Dashboard Gateway
+<div class="mb-6 text-center">
+<span class="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">Ecosystem Integration</span>
+<h1 class="text-2xl font-extrabold text-slate-900 mt-2">
+Dukungan Multi-Database Selesai (100%)
 </h1>
+<p class="text-xs text-slate-600 mt-2">
+Auditchain Gateway kini mendukung penarikan data secara real-time dari 4 mesin database utama di industri.
+</p>
 </div>
 
-<div class="space-y-3 text-xs text-slate-600">
-<div class="p-3 bg-white rounded-lg border border-slate-200">
-<div class="font-bold text-slate-800 mb-0.5">Realtime Telemetry</div>
-Visualisasi status kesehatan verifier node dan beban lalu lintas log audit.
+<!-- Database Grid -->
+<div class="grid grid-cols-4 gap-4 mt-6">
+  
+  <!-- PostgreSQL -->
+  <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center space-y-3 relative overflow-hidden">
+    <div class="absolute top-0 w-full h-1 bg-[#336791]"></div>
+    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-2xl shadow-inner">
+      🐘
+    </div>
+    <div>
+      <h3 class="text-sm font-extrabold text-slate-800">PostgreSQL</h3>
+      <p class="text-[10px] text-slate-500 mt-1">Logical Decoding</p>
+    </div>
+    <span class="text-[9px] font-bold font-mono text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 w-full">✓ STABLE</span>
+  </div>
+
+  <!-- MySQL -->
+  <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center space-y-3 relative overflow-hidden">
+    <div class="absolute top-0 w-full h-1 bg-[#F29111]"></div>
+    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-2xl shadow-inner">
+      🐬
+    </div>
+    <div>
+      <h3 class="text-sm font-extrabold text-slate-800">MySQL / MariaDB</h3>
+      <p class="text-[10px] text-slate-500 mt-1">Binlog Replication</p>
+    </div>
+    <span class="text-[9px] font-bold font-mono text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 w-full">✓ STABLE</span>
+  </div>
+
+  <!-- MongoDB -->
+  <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center space-y-3 relative overflow-hidden">
+    <div class="absolute top-0 w-full h-1 bg-[#47A248]"></div>
+    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-2xl shadow-inner">
+      🍃
+    </div>
+    <div>
+      <h3 class="text-sm font-extrabold text-slate-800">MongoDB</h3>
+      <p class="text-[10px] text-slate-500 mt-1">Change Streams (RS)</p>
+    </div>
+    <span class="text-[9px] font-bold font-mono text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 w-full">✓ STABLE</span>
+  </div>
+
+  <!-- Oracle -->
+  <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center space-y-3 relative overflow-hidden">
+    <div class="absolute top-0 w-full h-1 bg-[#F80000]"></div>
+    <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center border border-slate-100 text-2xl shadow-inner">
+      🔴
+    </div>
+    <div>
+      <h3 class="text-sm font-extrabold text-slate-800">Oracle DB</h3>
+      <p class="text-[10px] text-slate-500 mt-1">LogMiner / CDB-PDB</p>
+    </div>
+    <span class="text-[9px] font-bold font-mono text-blue-700 bg-blue-50 px-2 py-1 rounded border border-blue-200 w-full">✨ NEWLY ADDED</span>
+  </div>
+
 </div>
 
-<div class="p-3 bg-white rounded-lg border border-slate-200">
-<div class="font-bold text-slate-800 mb-0.5">Audit Log Search & Filter</div>
-Pencarian instan bukti audit berdasarkan ID transaksi dan tanda tangan digital.
-</div>
-</div>
-
-</div>
-
-<!-- Screenshot Container (Visual 3) -->
-<div class="col-span-7 pl-2">
-<div class="bg-white rounded-xl shadow-sm p-4 border border-slate-300 space-y-3">
-
-<div class="flex items-center justify-between border-b border-slate-100 pb-2">
-<span class="text-xs font-bold text-slate-700 font-mono">auditchain_dashboard_ui.png</span>
-<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded border border-emerald-200">VERIFIED</span>
-</div>
-
-<!-- TEMPAT GAMBAR UI DASHBOARD -->
-<!-- <img src="/dashboard-ui.png" class="w-full h-48 object-cover rounded-lg border border-slate-200 shadow-sm" /> -->
-
-<div class="border-2 border-dashed border-slate-200 bg-slate-50/80 rounded-lg p-8 text-center hover:border-[#00285d] transition-colors cursor-pointer">
-<div class="text-xl font-bold text-slate-400 mb-1">UI MOCKUP</div>
-<h4 class="font-bold text-slate-700 text-xs">Tangkapan Layar Dashboard Monitoring</h4>
-<p class="text-[10px] text-slate-400 mt-1">Simpan gambar di <code class="bg-white px-1 rounded font-mono">public/dashboard-ui.png</code></p>
-</div>
-
-<div class="flex items-center justify-between bg-slate-100 p-2 rounded-lg text-xs font-mono text-slate-600">
-<span>Status Engine: <strong class="text-emerald-600">HEALTHY</strong></span>
-<span>Cluster: <strong class="text-[#00285d]">prod-gateway-01</strong></span>
+<!-- Summary Banner -->
+<div class="mt-6 bg-slate-50 p-3.5 rounded-lg border border-slate-200 text-center shadow-sm flex items-center justify-center gap-2">
+  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+  <p class="text-xs text-slate-700 font-medium">
+    Keempat ekosistem database ini kini beroperasi penuh di bawah <strong>1 Skrip Otomatisasi Universal</strong> (<code class="text-[#00285d] font-bold">install.sh</code>).
+  </p>
 </div>
 
 </div>
-</div>
 
-</div>

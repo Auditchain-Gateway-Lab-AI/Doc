@@ -3,11 +3,6 @@ layout: default
 transition: slide-left
 ---
 
-<script setup>
-import { ref } from 'vue'
-const zoomImage = ref(null)
-</script>
-
 <!-- Footer -->
 <div class="absolute bottom-6 left-10 flex items-center space-x-2 text-xs text-slate-500 font-semibold">
 <span class="w-2 h-2 rounded-full bg-[#00285d]"></span>
@@ -17,134 +12,102 @@ const zoomImage = ref(null)
 Sprint 2026
 </div>
 
-<!-- SLIDE 3: Visual Progress Optimization -->
+<!-- SLIDE 4: Combined Backend, Infrastructure & Problem Solving -->
 <div class="pt-2 pb-10">
 
-<div class="mb-3">
-<span class="text-[10px] font-bold uppercase tracking-wider text-[#00285d] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">Progress Report</span>
-<h1 class="text-xl font-extrabold text-slate-900 mt-1">
-Progress & Optimasi Antarmuka Audit Log
+<div class="mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-[#00285d] bg-blue-50 px-3 py-1 rounded-md border border-blue-100">Backend, Infrastruktur & Reliability</span>
+<h1 class="text-2xl font-black text-slate-900 mt-1.5">
+Pencapaian Utama Backend & Solusi Arsitektur CDC
 </h1>
 </div>
 
-<div class="grid grid-cols-2 gap-4">
+<div class="grid grid-cols-3 gap-4 mb-4">
 
-<!-- Feature 1: Unifikasi Dynamic Table Select -->
-<div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-2.5">
+<!-- Card 1: Oracle CDC & Pipeline -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
   <div>
-    <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-      <span class="w-2 h-2 rounded-full bg-[#00285d]"></span>
-      1. Unifikasi Select Table ("All Tables")
+    <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+      <span class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span> 1. Real-Time Oracle CDC
+      </span>
+      <span class="text-[10px] font-mono font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">REAL-TIME</span>
     </div>
-    <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">
-      Menyatukan filter tabel ke <strong>All Transaction History</strong>. Mencegah redundansi UI karena data dipusatkan dalam 1 tabel query terintegrasi (alasan data inventory).
+    <p class="text-xs text-slate-600 leading-relaxed">
+      Integrasi <strong>Oracle Enterprise DB</strong> via <strong>Debezium & Kafka</strong> ke Go Gateway dan PostgreSQL Sentral.
     </p>
   </div>
-  
-  <div class="grid grid-cols-2 gap-2 pt-1">
-    <div class="space-y-1">
-      <span class="text-[9px] font-bold text-slate-500 uppercase tracking-wider flex items-center justify-between">
-        <span>Data Inventory (Awal)</span>
-        <span class="text-[8px] text-slate-400 font-normal">🔍 Click Zoom</span>
-      </span>
-      <div 
-        @click="zoomImage = { src: '/before-data-inventory.png', title: 'Data Inventory (Tampilan Awal)' }"
-        class="rounded-lg overflow-hidden border border-slate-200 shadow-xs cursor-zoom-in group relative"
-      >
-        <img src="/before-data-inventory.png" class="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-300" />
-        <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors flex items-center justify-center">
-          <span class="opacity-0 group-hover:opacity-100 bg-slate-900/80 text-white text-[9px] px-2 py-0.5 rounded-full backdrop-blur-xs font-mono transition-opacity">Zoom 🔍</span>
-        </div>
-      </div>
+  <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-xs text-slate-700 space-y-1.5">
+    <div class="flex justify-between font-mono">
+      <span>Multitenant:</span> <strong class="text-slate-900">CDB & PDB Ready</strong>
     </div>
-    <div class="space-y-1">
-      <span class="text-[9px] font-bold text-blue-700 uppercase tracking-wider flex items-center justify-between">
-        <span>Unified Select Table (Hasil)</span>
-        <span class="text-[8px] text-blue-400 font-normal">🔍 Click Zoom</span>
-      </span>
-      <div 
-        @click="zoomImage = { src: '/after-alltables-all-trancsaction.png', title: 'Unified Select Table (All Transaction History)' }"
-        class="rounded-lg overflow-hidden border border-blue-200 shadow-xs cursor-zoom-in group relative"
-      >
-        <img src="/after-alltables-all-trancsaction.png" class="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-300" />
-        <div class="absolute inset-0 bg-blue-900/0 group-hover:bg-blue-900/10 transition-colors flex items-center justify-center">
-          <span class="opacity-0 group-hover:opacity-100 bg-blue-900/80 text-white text-[9px] px-2 py-0.5 rounded-full backdrop-blur-xs font-mono transition-opacity">Zoom 🔍</span>
-        </div>
-      </div>
+    <div class="flex justify-between font-mono">
+      <span>Topic Routing:</span> <strong class="text-blue-600">Dynamic Prefix</strong>
     </div>
   </div>
 </div>
 
-<!-- Feature 2: Sorting Kronologis -->
-<div class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-2.5">
+<!-- Card 2: Installer Automation -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
   <div>
-    <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
-      <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-      2. Sorting Kronologis (Newest / Oldest First)
+    <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+      <span class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span> 2. Skrip Installer Bulletproof
+      </span>
+      <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">INSTALL.SH</span>
     </div>
-    <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">
-      Fitur pengurutan data transaksi audit (<code class="text-[9px] bg-slate-100 px-1 rounded text-emerald-700 font-mono">DESC</code> / <code class="text-[9px] bg-slate-100 px-1 rounded text-emerald-700 font-mono">ASC</code>) yang tersinkronisasi dengan Date Range Window (<strong class="text-slate-600">FROM - TO</strong>).
+    <p class="text-xs text-slate-600 leading-relaxed">
+      Refaktor skrip instalasi agen klien dengan dialog interaktif & otomatisasi susunan JSON rules Debezium.
     </p>
   </div>
+  <div class="bg-emerald-50/60 p-2.5 rounded-lg border border-emerald-200 text-xs text-emerald-950 font-medium leading-snug">
+    ⚡ Onboarding rumit Oracle tuntas hanya dengan <strong>3 pertanyaan terminal</strong>.
+  </div>
+</div>
 
-  <div class="grid grid-cols-2 gap-2 pt-1">
-    <div class="space-y-1">
-      <span class="text-[9px] font-bold text-emerald-700 uppercase tracking-wider flex items-center justify-between">
-        <span>Newest First (Terbaru)</span>
-        <span class="text-[8px] text-emerald-500 font-normal">🔍 Click Zoom</span>
+<!-- Card 3: Resolved Blocker -->
+<div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+      <span class="text-sm font-extrabold text-slate-800 flex items-center gap-1.5">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> 3. Bypass LogMiner Blocker
       </span>
-      <div 
-        @click="zoomImage = { src: '/newest-first.png', title: 'Sorting Mode: Newest First (Terbaru)' }"
-        class="rounded-lg overflow-hidden border border-emerald-200 shadow-xs cursor-zoom-in group relative"
-      >
-        <img src="/newest-first.png" class="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-300" />
-        <div class="absolute inset-0 bg-emerald-900/0 group-hover:bg-emerald-900/10 transition-colors flex items-center justify-center">
-          <span class="opacity-0 group-hover:opacity-100 bg-emerald-900/80 text-white text-[9px] px-2 py-0.5 rounded-full backdrop-blur-xs font-mono transition-opacity">Zoom 🔍</span>
-        </div>
-      </div>
+      <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">100% RESOLVED</span>
     </div>
-    <div class="space-y-1">
-      <span class="text-[9px] font-bold text-amber-700 uppercase tracking-wider flex items-center justify-between">
-        <span>Oldest First (Terlama)</span>
-        <span class="text-[8px] text-amber-500 font-normal">🔍 Click Zoom</span>
-      </span>
-      <div 
-        @click="zoomImage = { src: '/oldest-first.png', title: 'Sorting Mode: Oldest First (Terlama)' }"
-        class="rounded-lg overflow-hidden border border-amber-200 shadow-xs cursor-zoom-in group relative"
-      >
-        <img src="/oldest-first.png" class="w-full h-28 object-cover object-top group-hover:scale-105 transition-transform duration-300" />
-        <div class="absolute inset-0 bg-amber-900/0 group-hover:bg-amber-900/10 transition-colors flex items-center justify-center">
-          <span class="opacity-0 group-hover:opacity-100 bg-amber-900/80 text-white text-[9px] px-2 py-0.5 rounded-full backdrop-blur-xs font-mono transition-opacity">Zoom 🔍</span>
-        </div>
-      </div>
-    </div>
+    <p class="text-xs text-slate-600 leading-relaxed">
+      Penanganan pemblokiran skema <code class="bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">SYSTEM</code> oleh Oracle LogMiner internal.
+    </p>
+  </div>
+  <div class="bg-amber-50/70 p-2.5 rounded-lg border border-amber-200 text-xs text-amber-950 leading-snug">
+    🛠️ Solusi Taktis: <strong>Koneksi Hybrid</strong> (Host CDB, Target PDB) + Bypass <code class="bg-amber-100/80 px-1 rounded font-mono">schema.include.list</code>.
   </div>
 </div>
 
 </div>
 
-<!-- Interactive Modal Lightbox for Image Zoom -->
-<Teleport to="body">
-  <div 
-    v-if="zoomImage" 
-    class="fixed inset-0 z-[9999] bg-slate-950/85 backdrop-blur-md flex flex-col items-center justify-center p-6 cursor-zoom-out animate-fade-in"
-    @click="zoomImage = null"
-  >
-    <div class="relative max-w-5xl max-h-[85vh] flex flex-col items-center bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden p-3 space-y-2" @click.stop>
-      <div class="w-full flex items-center justify-between px-3 py-1 border-b border-slate-800 text-slate-200">
-        <span class="text-xs font-bold font-mono text-emerald-400">{{ zoomImage.title }}</span>
-        <button 
-          @click="zoomImage = null" 
-          class="text-xs text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded-lg transition-colors font-mono"
-        >
-          Tutup ✕
-        </button>
-      </div>
-      <div class="overflow-auto max-h-[75vh] w-full flex items-center justify-center rounded-xl bg-slate-950 p-2">
-        <img :src="zoomImage.src" class="max-w-full max-h-[72vh] object-contain rounded-lg shadow-md" />
-      </div>
+<!-- End-to-End Pipeline Banner -->
+<div class="bg-gradient-to-r from-[#00285d] to-slate-900 p-4 rounded-xl text-white shadow-md flex items-center justify-between">
+  <div class="space-y-1.5">
+    <span class="text-xs font-bold uppercase tracking-wider text-blue-200 bg-white/10 px-2.5 py-0.5 rounded font-mono">End-to-End Pipeline Data Flow</span>
+    <div class="flex items-center space-x-2 font-mono font-bold text-white text-xs pt-0.5">
+      <span class="bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded border border-amber-500/30">Oracle DB</span>
+      <span class="text-slate-400">➔</span>
+      <span class="bg-blue-500/20 text-blue-300 px-2.5 py-1 rounded border border-blue-500/30">Debezium CDC</span>
+      <span class="text-slate-400">➔</span>
+      <span class="bg-slate-700 text-slate-200 px-2.5 py-1 rounded border border-slate-600">Apache Kafka</span>
+      <span class="text-slate-400">➔</span>
+      <span class="bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded border border-indigo-500/30">Go Gateway</span>
+      <span class="text-slate-400">➔</span>
+      <span class="bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded border border-emerald-500/30">PostgreSQL Sentral</span>
     </div>
   </div>
-</Teleport>
+  <div class="bg-emerald-500/20 text-emerald-300 px-3.5 py-2 rounded-lg border border-emerald-500/40 text-center flex-shrink-0 ml-4">
+    <div class="text-sm font-extrabold font-mono">STABLE & VERIFIED</div>
+    <div class="text-[10px] text-slate-300 font-mono">Zero Data Loss Pipeline</div>
+  </div>
+</div>
 
 </div>
+
+
+
