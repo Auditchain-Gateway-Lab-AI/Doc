@@ -14,23 +14,23 @@ src: ./slides/01-executive-summary.md
 ---
 
 ---
-src: ./slides/04-backend-part2.md
+src: ./slides/02-log-history-ui.md
 ---
 
 ---
-src: ./slides/04-backend-part3.md
+src: ./slides/03-log-optimization.md
 ---
 
 ---
-src: ./slides/04-backend-part4.md
+src: ./slides/04-db-engine-detection.md
 ---
 
 ---
-src: ./slides/03-backend-code.md
+src: ./slides/05-backend-achievements.md
 ---
 
 ---
-src: ./slides/05-dashboard-ui.md
+src: ./slides/06-dashboard-ui.md
 ---
 
 ---
