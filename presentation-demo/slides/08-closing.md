@@ -4,7 +4,7 @@ class: text-center
 transition: view-transition
 ---
 
-<!-- SLIDE 7: Closing -->
+<!-- SLIDE 8: Closing -->
 <div class="flex flex-col items-center justify-center space-y-4">
 
 <img src="/logo.png" class="h-24 object-contain bg-white p-4 rounded-2xl shadow-md border border-slate-200 mb-2" />
