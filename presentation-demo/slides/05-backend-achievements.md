@@ -109,5 +109,47 @@ Pencapaian Utama Backend & Solusi Arsitektur CDC
 
 </div>
 
+---
+layout: default
+transition: slide-left
+---
 
+<!-- Footer -->
+<div class="absolute bottom-6 left-10 flex items-center space-x-2 text-xs text-slate-500 font-semibold">
+<span class="w-2 h-2 rounded-full bg-[#00285d]"></span>
+<span>AuditChain Gateway Protocol</span>
+</div>
+<div class="absolute bottom-6 right-10 text-xs text-slate-400 font-mono">
+Sprint 2026
+</div>
 
+<!-- SLIDE 4b: Multi Table Audit -->
+<div class="pt-2 pb-10">
+<div class="mb-4">
+<span class="text-xs font-bold uppercase tracking-wider text-[#00285d] bg-blue-50 px-3 py-1 rounded-md border border-blue-100">Fitur Baru Client</span>
+<h1 class="text-2xl font-black text-slate-900 mt-1.5">
+Dukungan Multi-Table Audit
+</h1>
+</div>
+
+<div class="grid grid-cols-5 gap-6">
+<div class="col-span-2 space-y-4 pt-4">
+<div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-blue-500">
+<p class="text-sm text-slate-700 leading-relaxed">
+Client sudah bisa menambahkan <strong>beberapa table</strong> sekaligus untuk diaudit oleh sistem kita.
+</p>
+</div>
+<div class="bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-sm border-l-4 border-l-emerald-500">
+<p class="text-sm text-slate-700 leading-relaxed">
+Jadi client tidak harus memilih 1 saja yang ingin diaudit, melainkan bisa <strong>banyak table</strong> dengan cara memilih table mana saja yang akan dipilih secara fleksibel.
+</p>
+</div>
+</div>
+
+<div class="col-span-3 flex items-center">
+<div class="bg-slate-100 p-2 rounded-xl border border-slate-200 shadow-inner w-full">
+<img src="/Double adudit.png" alt="Multi Table Audit" class="w-full rounded-lg shadow-sm border border-slate-300" />
+</div>
+</div>
+</div>
+</div>
