@@ -1,0 +1,17 @@
+{
+  "name": "presentation-narasi-auditchain",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --port 3031",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.18.1",
+    "@slidev/theme-seriph": "^0.25.0",
+    "playwright-chromium": "^1.62.1"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "^0.25.0"
+  }
+}
