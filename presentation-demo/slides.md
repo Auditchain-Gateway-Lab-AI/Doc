@@ -14,10 +14,6 @@ src: ./slides/01-executive-summary.md
 ---
 
 ---
-src: ./slides/02-log-history-ui.md
----
-
----
 src: ./slides/03-log-optimization.md
 ---
 
