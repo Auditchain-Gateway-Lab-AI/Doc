@@ -9,7 +9,7 @@ Folder ini dipakai untuk menyimpan source presentasi progress dan hasil laporan 
 
    ```bash
    cd presentation-demo
-   npm run export -- --output ../Progress_Agustus/Progress_Auditchain_Gateway-03-Agustus-2026.pdf
+   npm run export -- --output ../Progress_Agustus/Progress_Auditchain_Gateway-21-Agustus-2026.pdf
    ```
 
 3. Commit/push PDF hasil export ke folder progress bulan berjalan, misalnya `Progress_Agustus`.

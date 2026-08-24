@@ -28,74 +28,74 @@ Rangkuman pembaruan fitur utama yang telah dikembangkan dan dipush oleh tim pada
 </p>
 
 <div class="mt-4 p-3 rounded-xl bg-blue-50/80 border border-blue-100 text-[9.5px] text-slate-700">
-<div class="font-bold text-[#00285d] mb-0.5">Status Fitur:</div>
-Modul Auto-Discovery DB dan Optimasi UI Audit Log siap digunakan.
+<div class="font-bold text-[#00285d] mb-0.5">Status Pembaruan:</div>
+Infrastruktur CI/CD dan automasi instalasi backend <i>(agent & CDC)</i> telah beroperasi penuh dan siap demo.
 </div>
 </div>
 
 <!-- Right Cards Grid (4 Key Highlights) -->
 <div class="col-span-8 grid grid-cols-2 gap-3">
 
-<!-- Card 1: Auto-Discovery (Team) -->
+<!-- Card 1: CI/CD -->
 <div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-[#00285d] bg-white rounded-xl shadow-sm border border-slate-200">
 <div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Database Engine</span>
-<span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">CDC Ready</span>
+<span class="text-[8px] font-mono font-bold uppercase text-slate-400">DevOps & Pipeline</span>
+<span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">CI/CD Ready</span>
 </div>
 <div>
 <div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-[#00285d]"></span> Auto-Discovery DB
+  <span class="w-1.5 h-1.5 rounded-full bg-[#00285d]"></span> Automasi Deployment
 </div>
 <p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Mendeteksi database & tabel klien secara otomatis untuk persiapan proses <em>Change Data Capture</em> (CDC).
+Penggunaan GitHub Actions untuk memicu <em>deployment</em> otomatis ke server development pada setiap <i>merge</i> ke branch <code class="text-[8px] bg-slate-100 px-1 rounded text-blue-700">dev</code>.
 </p>
 </div>
 </div>
 
-<!-- Card 2: Simplifikasi Kredensial (Team) -->
+<!-- Card 2: Smart Networking -->
 <div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-emerald-500 bg-white rounded-xl shadow-sm border border-slate-200">
 <div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Konektivitas Klien</span>
-<span class="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[8px] font-bold rounded border border-emerald-100">Auto Connect</span>
+<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Infrastruktur</span>
+<span class="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[8px] font-bold rounded border border-emerald-100">Cross-Container</span>
 </div>
 <div>
 <div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Simplifikasi Kredensial
+  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Smart Docker Networking
 </div>
 <p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Menghubungkan DB klien hanya dengan Username & Password, serta indikator status koneksi real-time.
+Resolusi dinamis port PostgreSQL & implementasi <code class="text-[8px] bg-slate-100 px-1 rounded text-emerald-700">host.docker.internal</code> untuk konektivitas Debezium antar-container.
 </p>
 </div>
 </div>
 
-<!-- Card 3: Unifikasi Select Table (User) -->
+<!-- Card 3: Automated CDC -->
 <div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-indigo-500 bg-white rounded-xl shadow-sm border border-slate-200">
 <div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">UI / UX Log Query</span>
-<span class="px-1.5 py-0.5 bg-indigo-50 text-indigo-700 text-[8px] font-bold rounded border border-indigo-100">Optimasi View</span>
+<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Database Setup</span>
+<span class="px-1.5 py-0.5 bg-indigo-50 text-indigo-700 text-[8px] font-bold rounded border border-indigo-100">Auto Setup</span>
 </div>
 <div>
 <div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Unifikasi Select Table
+  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Automated CDC Setup
 </div>
 <p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Menyatukan filter tabel (<code class="text-[8px] bg-slate-100 px-1 rounded text-indigo-700">All Tables</code>) ke <em>All Transaction History</em> untuk menghilangkan redundansi Data Inventory.
+Sistem otomatis memverifikasi dan membuat <i>Publication</i> (<code class="text-[8px] bg-slate-100 px-1 rounded text-indigo-700">dbz_publication</code>) di PostgreSQL secara eksplisit sebelum konektor berjalan.
 </p>
 </div>
 </div>
 
-<!-- Card 4: Sorting Kronologis (User) -->
+<!-- Card 4: Resilient Restart -->
 <div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-amber-500 bg-white rounded-xl shadow-sm border border-slate-200">
 <div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Data Exploration</span>
-<span class="text-[8px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100">DESC / ASC</span>
+<span class="text-[8px] font-mono font-bold uppercase text-slate-400">System Reliability</span>
+<span class="text-[8px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100">Fault Tolerant</span>
 </div>
 <div>
 <div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Sorting Kronologis
+  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Resilient Restart
 </div>
 <p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Pengurutan transaksi (Newest / Oldest First) yang tersinkronisasi penuh dengan Date Range Window (<strong class="text-slate-600">FROM - TO</strong>).
+Implementasi <i>smart wait loop</i> dan pengecekan konektivitas saat container PostgreSQL dimuat ulang untuk mengaktifkan sinkronisasi <i>wal_level</i>.
 </p>
 </div>
 </div>

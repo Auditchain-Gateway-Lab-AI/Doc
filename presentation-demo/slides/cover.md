@@ -22,6 +22,6 @@ Q3 - 2026
 Laporan Progres <span class="text-emerald-400">AuditChain Gateway</span>
 </div>
 <p class="text-xs text-blue-200/70 mt-2 font-medium tracking-wide">
-Sistem Verifikasi & Ledger Audit Terdistribusi
+Fokus Pembaruan: Automasi Infrastruktur CI/CD & Reliabilitas Backend
 </p>
 </div>
