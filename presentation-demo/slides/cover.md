@@ -9,7 +9,7 @@ transition: fade-out
   <div class="pointer-events-none absolute -bottom-36 left-1/3 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
   <div class="relative flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-lg font-bold text-emerald-300">A</div>
+      <img src="/auditchain-logo.png" alt="Logo AuditChain" class="h-10 w-10 rounded-xl object-cover" />
       <div><div class="text-sm font-bold tracking-wide">AuditChain</div><div class="text-[9px] uppercase tracking-[0.24em] text-slate-400">Progress Update</div></div>
     </div>
     <div class="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-200">2 Oktober 2026</div>

@@ -5,7 +5,7 @@ transition: view-transition
 ---
 
 <div class="absolute inset-0 flex flex-col items-center justify-center bg-[#071629] px-12 py-10 text-center text-white">
-  <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-300/25 bg-emerald-300/10 text-2xl font-bold text-emerald-300">A</div>
+  <img src="/auditchain-logo.png" alt="Logo AuditChain" class="h-14 w-14 rounded-2xl object-cover" />
   <div class="mt-6 text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-300">AuditChain · Progress Update</div>
   <h1 class="mt-3 text-4xl font-extrabold tracking-tight">Terima kasih</h1>
   <p class="mt-3 max-w-xl text-sm leading-relaxed text-slate-300">Fokus demo berikutnya: lihat dashboard client, lalu ikuti recovery dari sumber off-chain dan cocokkan hasilnya dengan log AuditChain.</p>
