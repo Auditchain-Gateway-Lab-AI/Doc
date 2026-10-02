@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120" role="img" aria-labelledby="title desc">
+  <title id="title">Flow Fixing Pengecekan Data Terakhir dan Recovery AuditChain</title>
+  <desc id="desc">Perbandingan alur sebelum fixing, logika backend terbaru, serta output setelah fixing untuk event recovery dan pengecekan Agent.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.52" stop-color="#0b1728"/>
+      <stop offset="1" stop-color="#08131d"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0d3d63"/>
+      <stop offset="0.5" stop-color="#105d70"/>
+      <stop offset="1" stop-color="#0a745f"/>
+    </linearGradient>
+    <linearGradient id="panelRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#25151c"/>
+      <stop offset="1" stop-color="#14131a"/>
+    </linearGradient>
+    <linearGradient id="panelBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10243a"/>
+      <stop offset="1" stop-color="#101823"/>
+    </linearGradient>
+    <linearGradient id="panelGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d2b29"/>
+      <stop offset="1" stop-color="#101b20"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.28"/>
+    </filter>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fb7185"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34d399"/>
+    </marker>
+    <style>
+      .title { font: 700 38px 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #cbd5e1; }
+      .panel-title { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .panel-sub { font: 400 14px 'Segoe UI', Arial, sans-serif; fill: #94a3b8; }
+      .box-title { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .box-text { font: 400 13px 'Segoe UI', Arial, sans-serif; fill: #cbd5e1; }
+      .small { font: 600 12px 'Segoe UI', Arial, sans-serif; fill: #cbd5e1; }
+      .tiny { font: 500 11px 'Segoe UI', Arial, sans-serif; fill: #94a3b8; }
+      .mono { font: 600 12px Consolas, 'Courier New', monospace; fill: #dbeafe; }
+      .file { font: 600 12px Consolas, 'Courier New', monospace; fill: #cbd5e1; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1120" fill="url(#bg)"/>
+  <circle cx="1660" cy="50" r="250" fill="#14b8a6" opacity="0.05"/>
+  <circle cx="110" cy="1010" r="260" fill="#38bdf8" opacity="0.04"/>
+
+  <rect x="40" y="28" width="1720" height="98" rx="22" fill="url(#header)" filter="url(#shadow)"/>
+  <text id="diagram-title" x="78" y="72" class="title">FIXING PENGECEKAN DATA TERAKHIR &amp; RECOVERY</text>
+  <text x="80" y="103" class="subtitle">Memisahkan event terbaru pada timeline dari event client terbaru yang harus dibandingkan dengan Agent</text>
+  <rect x="1516" y="53" width="198" height="42" rx="21" fill="#052e2b" stroke="#5eead4" stroke-width="1.5"/>
+  <text x="1615" y="79" text-anchor="middle" class="small" fill="#99f6e4">AUDITCHAIN GATEWAY</text>
+
+  <!-- Panel 1: Before -->
+  <rect x="45" y="155" width="520" height="750" rx="24" fill="url(#panelRed)" stroke="#7f1d2d" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="45" y="155" width="520" height="72" rx="24" fill="#3a1620"/>
+  <path d="M45 203 L45 179 Q45 155 69 155 L541 155 Q565 155 565 179 L565 203 Z" fill="#3a1620"/>
+  <circle cx="82" cy="191" r="17" fill="#be123c"/>
+  <text x="82" y="197" text-anchor="middle" class="box-title">1</text>
+  <text x="112" y="188" class="panel-title">SEBELUM FIXING</text>
+  <text x="112" y="210" class="panel-sub">Raw latest mengambil event RECOVERY</text>
+
+  <text x="75" y="260" class="small" fill="#fda4af">TIMELINE RESOURCE</text>
+  <rect x="72" y="280" width="120" height="72" rx="14" fill="#111c29" stroke="#334155"/>
+  <text x="132" y="309" text-anchor="middle" class="box-title">INSERT</text>
+  <text x="132" y="333" text-anchor="middle" class="tiny">event client</text>
+  <line x1="194" y1="316" x2="218" y2="316" stroke="#fb7185" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <rect x="224" y="280" width="120" height="72" rx="14" fill="#111c29" stroke="#334155"/>
+  <text x="284" y="309" text-anchor="middle" class="box-title">UPDATE</text>
+  <text x="284" y="333" text-anchor="middle" class="tiny">event client</text>
+  <line x1="346" y1="316" x2="370" y2="316" stroke="#fb7185" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <rect x="376" y="280" width="150" height="72" rx="14" fill="#381923" stroke="#fb7185" stroke-width="2"/>
+  <text x="451" y="309" text-anchor="middle" class="box-title">RECOVERY</text>
+  <text x="451" y="333" text-anchor="middle" class="small" fill="#fda4af">● raw latest</text>
+
+  <line x1="451" y1="354" x2="451" y2="389" stroke="#fb7185" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <rect x="84" y="397" width="442" height="82" rx="16" fill="#2a1720" stroke="#9f1239"/>
+  <text x="105" y="426" class="box-title" fill="#fda4af">RECOVERY dilewati dari Agent</text>
+  <text x="105" y="451" class="box-text">agent_status = skipped_recovery</text>
+
+  <line x1="305" y1="480" x2="305" y2="515" stroke="#fb7185" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <rect x="84" y="522" width="442" height="98" rx="16" fill="#2a1720" stroke="#9f1239"/>
+  <text x="105" y="551" class="box-title" fill="#fda4af">UPDATE dianggap historical</text>
+  <text x="105" y="577" class="box-text">Karena UPDATE bukan raw latest</text>
+  <text x="105" y="599" class="mono">agent_status = skipped_historical</text>
+
+  <line x1="305" y1="622" x2="305" y2="657" stroke="#fb7185" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <rect x="74" y="665" width="462" height="116" rx="18" fill="#4a1421" stroke="#fb7185" stroke-width="2"/>
+  <text x="305" y="700" text-anchor="middle" class="panel-title" fill="#fecdd3">SOURCE CHECK HILANG</text>
+  <text x="305" y="730" text-anchor="middle" class="box-text">Tidak ada log yang dibandingkan</text>
+  <text x="305" y="753" text-anchor="middle" class="box-text">dengan current state database client</text>
+
+  <rect x="84" y="810" width="442" height="62" rx="14" fill="#1e1820" stroke="#4c1d2b"/>
+  <text x="105" y="837" class="small" fill="#fda4af">ROOT CAUSE</text>
+  <text x="105" y="857" class="tiny">Satu flag “latest” dipakai untuk dua arti berbeda.</text>
+
+  <!-- Panel 2: New backend logic -->
+  <rect x="620" y="155" width="560" height="750" rx="24" fill="url(#panelBlue)" stroke="#075985" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="620" y="155" width="560" height="72" rx="24" fill="#12334f"/>
+  <path d="M620 203 L620 179 Q620 155 644 155 L1156 155 Q1180 155 1180 179 L1180 203 Z" fill="#12334f"/>
+  <circle cx="657" cy="191" r="17" fill="#0284c7"/>
+  <text x="657" y="197" text-anchor="middle" class="box-title">2</text>
+  <text x="687" y="188" class="panel-title">LOGIC BACKEND BARU</text>
+  <text x="687" y="210" class="panel-sub">Dua penanda latest dengan tujuan berbeda</text>
+
+  <rect x="680" y="255" width="440" height="64" rx="16" fill="#102a42" stroke="#0ea5e9"/>
+  <text x="900" y="282" text-anchor="middle" class="box-title">Ambil history resource — timestamp ASC</text>
+  <text x="900" y="303" text-anchor="middle" class="mono">INSERT → UPDATE → RECOVERY</text>
+
+  <line x1="900" y1="320" x2="900" y2="350" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <rect x="658" y="360" width="230" height="94" rx="16" fill="#11283d" stroke="#38bdf8"/>
+  <text x="773" y="389" text-anchor="middle" class="box-title">Latest Timeline</text>
+  <text x="773" y="415" text-anchor="middle" class="mono">is_latest = true</text>
+  <text x="773" y="437" text-anchor="middle" class="tiny">Event paling akhir: RECOVERY</text>
+
+  <rect x="912" y="360" width="230" height="94" rx="16" fill="#11283d" stroke="#38bdf8"/>
+  <text x="1027" y="389" text-anchor="middle" class="box-title">Latest Client Event</text>
+  <text x="1027" y="415" text-anchor="middle" class="mono">is_latest_client_event</text>
+  <text x="1027" y="437" text-anchor="middle" class="tiny">Scan mundur, skip RECOVERY</text>
+
+  <line x1="900" y1="455" x2="900" y2="485" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="680" y="510" class="small" fill="#7dd3fc">KLASIFIKASI PER EVENT</text>
+
+  <rect x="655" y="528" width="490" height="70" rx="15" fill="#162334" stroke="#64748b"/>
+  <rect x="672" y="544" width="126" height="38" rx="19" fill="#3b1a27" stroke="#fb7185"/>
+  <text x="735" y="568" text-anchor="middle" class="small">RECOVERY</text>
+  <text x="820" y="559" class="box-text">Tidak dibandingkan ke Agent</text>
+  <text x="820" y="579" class="mono">skipped_recovery</text>
+
+  <rect x="655" y="613" width="490" height="82" rx="15" fill="#102f3f" stroke="#38bdf8" stroke-width="1.5"/>
+  <rect x="672" y="634" width="146" height="40" rx="20" fill="#083344" stroke="#22d3ee"/>
+  <text x="745" y="659" text-anchor="middle" class="small">CLIENT LATEST</text>
+  <text x="840" y="644" class="box-text">Panggil VerifyAgainstAgent</text>
+  <text x="840" y="667" class="mono">matched | mismatch | unreachable</text>
+
+  <rect x="655" y="710" width="490" height="70" rx="15" fill="#162334" stroke="#475569"/>
+  <rect x="672" y="726" width="146" height="38" rx="19" fill="#1e293b" stroke="#64748b"/>
+  <text x="745" y="750" text-anchor="middle" class="small">CLIENT LAMA</text>
+  <text x="840" y="741" class="box-text">Tidak dibandingkan ke live state</text>
+  <text x="840" y="761" class="mono">skipped_historical</text>
+
+  <rect x="670" y="812" width="460" height="60" rx="14" fill="#082f49" stroke="#0ea5e9"/>
+  <text x="900" y="838" text-anchor="middle" class="small" fill="#bae6fd">Gateway/Fabric status ≠ Agent availability</text>
+  <text x="900" y="858" text-anchor="middle" class="tiny">Integritas chain tetap dinilai secara independen.</text>
+
+  <!-- Panel 3: After -->
+  <rect x="1235" y="155" width="520" height="750" rx="24" fill="url(#panelGreen)" stroke="#047857" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1235" y="155" width="520" height="72" rx="24" fill="#0b3b34"/>
+  <path d="M1235 203 L1235 179 Q1235 155 1259 155 L1731 155 Q1755 155 1755 179 L1755 203 Z" fill="#0b3b34"/>
+  <circle cx="1272" cy="191" r="17" fill="#059669"/>
+  <text x="1272" y="197" text-anchor="middle" class="box-title">3</text>
+  <text x="1302" y="188" class="panel-title">SETELAH FIXING</text>
+  <text x="1302" y="210" class="panel-sub">Timeline dan source verification sama-sama benar</text>
+
+  <text x="1270" y="260" class="small" fill="#6ee7b7">OUTPUT HISTORY: INSERT → UPDATE → RECOVERY</text>
+
+  <rect x="1270" y="280" width="450" height="105" rx="17" fill="#11302e" stroke="#34d399" stroke-width="1.5"/>
+  <rect x="1290" y="300" width="128" height="36" rx="18" fill="#064e3b"/>
+  <text x="1354" y="323" text-anchor="middle" class="small" fill="#a7f3d0">RECOVERY</text>
+  <rect x="1432" y="300" width="96" height="36" rx="18" fill="#075985"/>
+  <text x="1480" y="323" text-anchor="middle" class="small" fill="#bae6fd">● Latest</text>
+  <text x="1290" y="361" class="mono">agent_status = skipped_recovery</text>
+
+  <line x1="1495" y1="386" x2="1495" y2="416" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <rect x="1270" y="425" width="450" height="122" rx="17" fill="#0f3837" stroke="#2dd4bf" stroke-width="2"/>
+  <rect x="1290" y="445" width="112" height="36" rx="18" fill="#0e7490"/>
+  <text x="1346" y="468" text-anchor="middle" class="small" fill="#cffafe">UPDATE</text>
+  <rect x="1416" y="445" width="140" height="36" rx="18" fill="#0f766e"/>
+  <text x="1486" y="468" text-anchor="middle" class="small" fill="#ccfbf1">● Source latest</text>
+  <text x="1290" y="508" class="mono">agent_status = matched</text>
+  <text x="1290" y="530" class="tiny">UPDATE tetap dibandingkan ke current client state</text>
+
+  <line x1="1495" y1="548" x2="1495" y2="578" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <rect x="1270" y="587" width="450" height="88" rx="17" fill="#13252a" stroke="#475569"/>
+  <rect x="1290" y="606" width="112" height="34" rx="17" fill="#1e293b"/>
+  <text x="1346" y="628" text-anchor="middle" class="small">INSERT</text>
+  <text x="1423" y="619" class="box-text">Historical client event</text>
+  <text x="1423" y="641" class="mono">skipped_historical</text>
+
+  <rect x="1270" y="710" width="214" height="112" rx="16" fill="#073b35" stroke="#10b981"/>
+  <text x="1377" y="740" text-anchor="middle" class="small" fill="#6ee7b7">AUDITCHAIN/FABRIC</text>
+  <text x="1377" y="775" text-anchor="middle" class="panel-title" fill="#a7f3d0">VALID</text>
+  <text x="1377" y="802" text-anchor="middle" class="tiny">Hash + anchor cocok</text>
+
+  <rect x="1500" y="710" width="220" height="112" rx="16" fill="#0d3442" stroke="#22d3ee"/>
+  <text x="1610" y="740" text-anchor="middle" class="small" fill="#67e8f9">DATA SUMBER</text>
+  <text x="1610" y="775" text-anchor="middle" class="panel-title" fill="#a5f3fc">MATCHED</text>
+  <text x="1610" y="802" text-anchor="middle" class="tiny">Atau mismatch / unreachable</text>
+
+  <rect x="1270" y="844" width="450" height="32" rx="16" fill="#064e3b"/>
+  <text x="1495" y="865" text-anchor="middle" class="small" fill="#d1fae5">✓ Current client state kembali terverifikasi</text>
+
+  <!-- Files changed -->
+  <rect x="45" y="940" width="1710" height="135" rx="22" fill="#0c1725" stroke="#26374b"/>
+  <text x="76" y="976" class="panel-title">LETAK FIXING</text>
+  <text x="250" y="976" class="panel-sub">Backend menentukan source latest; frontend hanya merepresentasikan hasilnya.</text>
+
+  <rect x="76" y="998" width="320" height="50" rx="12" fill="#132235" stroke="#334155"/>
+  <text x="94" y="1019" class="file">backend/audit/repository.go</text>
+  <text x="94" y="1038" class="tiny">Query latest client event, exclude RECOVERY</text>
+
+  <rect x="414" y="998" width="320" height="50" rx="12" fill="#132235" stroke="#334155"/>
+  <text x="432" y="1019" class="file">backend/audit/service.go</text>
+  <text x="432" y="1038" class="tiny">Dua flag latest + klasifikasi Agent</text>
+
+  <rect x="752" y="998" width="300" height="50" rx="12" fill="#132235" stroke="#334155"/>
+  <text x="770" y="1019" class="file">backend/audit/service_test.go</text>
+  <text x="770" y="1038" class="tiny">Regression test UPDATE → RECOVERY</text>
+
+  <rect x="1070" y="998" width="346" height="50" rx="12" fill="#132235" stroke="#334155"/>
+  <text x="1088" y="1019" class="file">dashboard/ResourceDetailModal.jsx</text>
+  <text x="1088" y="1038" class="tiny">Latest vs Source latest pada History</text>
+
+  <rect x="1434" y="998" width="290" height="50" rx="12" fill="#132235" stroke="#334155"/>
+  <text x="1452" y="1019" class="file">ResourceDetailModal.test.jsx</text>
+  <text x="1452" y="1038" class="tiny">Kontrak UI dan backward compatibility</text>
+
+  <text x="900" y="1100" text-anchor="middle" class="tiny">AuditChain Gateway — fixing current source verification after recovery</text>
+</svg>

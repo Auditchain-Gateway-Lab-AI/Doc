@@ -1,27 +1,14 @@
 ---
-layout: center
-class: text-center
+layout: cover
+class: "!p-0 relative"
 transition: view-transition
 ---
 
-<!-- SLIDE 8: Closing -->
-<div class="flex flex-col items-center justify-center space-y-4">
-
-<img src="/logo.png" class="h-24 object-contain bg-white p-4 rounded-2xl shadow-md border border-slate-200 mb-2" />
-
-<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">Terima Kasih</h1>
-
-<p class="text-slate-500 max-w-md text-xs leading-relaxed">
-Laporan Progres AuditChain Gateway Protocol <br/> Silakan menyampaikan pertanyaan atau arahan lebih lanjut dari Manajemen.
-</p>
-
-<div class="pt-2 flex items-center space-x-3">
-<span class="px-3.5 py-1.5 rounded-lg bg-white text-slate-700 text-xs font-semibold border border-slate-200 shadow-sm">
-Sesi Tanya Jawab (Q&A)
-</span>
-<span class="px-3.5 py-1.5 rounded-lg bg-blue-50 text-[#00285d] text-xs font-semibold border border-blue-100 shadow-sm">
-AuditChain Core Team
-</span>
-</div>
-
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-[#071629] px-12 py-10 text-center text-white">
+  <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-300/25 bg-emerald-300/10 text-2xl font-bold text-emerald-300">A</div>
+  <div class="mt-6 text-[10px] font-bold uppercase tracking-[0.24em] text-emerald-300">AuditChain · Progress Update</div>
+  <h1 class="mt-3 text-4xl font-extrabold tracking-tight">Terima kasih</h1>
+  <p class="mt-3 max-w-xl text-sm leading-relaxed text-slate-300">Fokus demo berikutnya: lihat dashboard client, lalu ikuti recovery dari sumber off-chain dan cocokkan hasilnya dengan log AuditChain.</p>
+  <div class="mt-8 flex gap-3"><span class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold">Frontend · Client Portal</span><span class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold">Backend · Data Recovery</span></div>
+  <div class="mt-10 text-[10px] uppercase tracking-[0.2em] text-slate-500">Diskusi & tanya jawab</div>
 </div>

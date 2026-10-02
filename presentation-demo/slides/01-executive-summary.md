@@ -1,105 +1,46 @@
 ---
 layout: default
 transition: fade-out
-class: "!py-2 !px-8"
 ---
 
-<!-- Footer -->
-<div class="absolute bottom-2 left-10 flex items-center space-x-2 text-[10px] text-slate-500 font-semibold z-10">
-<span class="w-1.5 h-1.5 rounded-full bg-[#00285d]"></span>
-<span>AuditChain Gateway Protocol</span>
-</div>
-<div class="absolute bottom-2 right-10 text-[10px] text-slate-400 font-mono z-10">
-Sprint 2026
-</div>
+<div class="px-8 pt-3">
+  <div class="flex items-end justify-between">
+    <div>
+      <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-700">Ringkasan · 2 objektif</div>
+      <h1 class="m-0 mt-1 text-2xl font-extrabold tracking-tight text-slate-900">Dua sisi yang dibenahi</h1>
+    </div>
+    <div class="text-xs text-slate-500">UI membantu membaca kondisi · backend menjaga sumber data</div>
+  </div>
 
-<!-- SLIDE 1: Executive Summary / Ringkasan Progress -->
-<div class="grid grid-cols-12 gap-6 h-full items-center pb-2 pt-2">
+  <div class="mt-3 grid grid-cols-2 gap-3">
+    <div class="rounded-2xl border border-blue-100 bg-white p-3 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="whitespace-nowrap rounded-lg bg-blue-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-blue-800">Objektif 1</span>
+        <div class="text-[18px] font-bold leading-tight text-slate-900">Frontend · Client Portal</div>
+      </div>
+      <div class="mt-2 space-y-1.5">
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-700 text-[10px] font-bold text-white">01</span><div><div class="text-xs font-bold text-slate-800">Portal dan navigasi</div><div class="text-[10px] leading-relaxed text-slate-600">Menyiapkan akses client ke halaman Monitor dan Recovery.</div></div></div>
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-700 text-[10px] font-bold text-white">02</span><div><div class="text-xs font-bold text-slate-800">Monitoring</div><div class="text-[10px] leading-relaxed text-slate-600">Menyajikan status, aktivitas audit, dan kondisi data client.</div></div></div>
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-700 text-[10px] font-bold text-white">03</span><div><div class="text-xs font-bold text-slate-800">Tampilan Recovery</div><div class="text-[10px] leading-relaxed text-slate-600">Menyiapkan halaman insiden, riwayat, dan snapshot.</div></div></div>
+      </div>
+    </div>
+    <div class="rounded-2xl border border-emerald-100 bg-white p-3 shadow-sm">
+      <div class="flex items-center gap-2">
+        <span class="whitespace-nowrap rounded-lg bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-800">Objektif 2</span>
+        <div class="text-[18px] font-bold leading-tight text-slate-900">Backend · Data & Recovery</div>
+      </div>
+      <div class="mt-2 space-y-1.5">
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-[10px] font-bold text-white">01</span><div><div class="text-xs font-bold text-slate-800">Recovery dari database client</div><div class="text-[10px] leading-relaxed text-slate-600">Jalur aktif mengambil sumber data langsung dari client, bukan MinIO.</div></div></div>
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-[10px] font-bold text-white">02</span><div><div class="text-xs font-bold text-slate-800">Data terbaru dan log selaras</div><div class="text-[10px] leading-relaxed text-slate-600">Kondisi database dicocokkan dengan catatan perubahan terbaru.</div></div></div>
+        <div class="flex gap-2.5 rounded-xl bg-slate-50 p-2"><span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-[10px] font-bold text-white">03</span><div><div class="text-xs font-bold text-slate-800">Hasil recovery diverifikasi</div><div class="text-[10px] leading-relaxed text-slate-600">Data diperiksa sebelum dan sesudah proses pemulihan.</div></div></div>
+      </div>
+    </div>
+  </div>
 
-<!-- Left Overview Column -->
-<div class="col-span-4 pr-1">
-<span class="text-[9px] font-bold uppercase tracking-wider text-[#00285d] bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">Executive Summary</span>
-<h1 class="text-2xl font-extrabold text-slate-900 leading-tight mt-3">
-Ringkasan Progress <br/>
-<span class="text-[#00285d]">Sprint Terbaru</span>
-</h1>
-<p class="text-[10px] text-slate-500 mt-2.5 leading-relaxed">
-Rangkuman pembaruan fitur utama yang telah dikembangkan dan dipush oleh tim pada sistem Gateway Audit.
-</p>
-
-<div class="mt-4 p-3 rounded-xl bg-blue-50/80 border border-blue-100 text-[9.5px] text-slate-700">
-<div class="font-bold text-[#00285d] mb-0.5">Status Pembaruan:</div>
-Infrastruktur CI/CD dan automasi instalasi backend <i>(agent & CDC)</i> telah beroperasi penuh dan siap demo.
+  <div class="mt-2 grid grid-cols-2 gap-3">
+    <div class="rounded-xl bg-blue-950 px-3 py-2 text-white"><div class="text-[9px] font-bold uppercase tracking-[0.18em] text-blue-200">Analogi frontend</div><div class="mt-1 text-[10px] leading-relaxed"><strong>Panel indikator:</strong> kondisi penting terlihat dalam satu tempat.</div></div>
+    <div class="rounded-xl bg-emerald-950 px-3 py-2 text-white"><div class="text-[9px] font-bold uppercase tracking-[0.18em] text-emerald-200">Analogi backend</div><div class="mt-1 text-[10px] leading-relaxed"><strong>Buku catatan resmi:</strong> data dicocokkan sebelum dan setelah diperbaiki.</div></div>
+  </div>
 </div>
-</div>
-
-<!-- Right Cards Grid (4 Key Highlights) -->
-<div class="col-span-8 grid grid-cols-2 gap-3">
-
-<!-- Card 1: CI/CD -->
-<div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-[#00285d] bg-white rounded-xl shadow-sm border border-slate-200">
-<div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">DevOps & Pipeline</span>
-<span class="px-1.5 py-0.5 bg-blue-50 text-blue-700 text-[8px] font-bold rounded border border-blue-100">CI/CD Ready</span>
-</div>
-<div>
-<div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-[#00285d]"></span> Automasi Deployment
-</div>
-<p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Penggunaan GitHub Actions untuk memicu <em>deployment</em> otomatis ke server development pada setiap <i>merge</i> ke branch <code class="text-[8px] bg-slate-100 px-1 rounded text-blue-700">dev</code>.
-</p>
-</div>
-</div>
-
-<!-- Card 2: Smart Networking -->
-<div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-emerald-500 bg-white rounded-xl shadow-sm border border-slate-200">
-<div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Infrastruktur</span>
-<span class="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 text-[8px] font-bold rounded border border-emerald-100">Cross-Container</span>
-</div>
-<div>
-<div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Smart Docker Networking
-</div>
-<p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Resolusi dinamis port PostgreSQL & implementasi <code class="text-[8px] bg-slate-100 px-1 rounded text-emerald-700">host.docker.internal</code> untuk konektivitas Debezium antar-container.
-</p>
-</div>
-</div>
-
-<!-- Card 3: Automated CDC -->
-<div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-indigo-500 bg-white rounded-xl shadow-sm border border-slate-200">
-<div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">Database Setup</span>
-<span class="px-1.5 py-0.5 bg-indigo-50 text-indigo-700 text-[8px] font-bold rounded border border-indigo-100">Auto Setup</span>
-</div>
-<div>
-<div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Automated CDC Setup
-</div>
-<p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Sistem otomatis memverifikasi dan membuat <i>Publication</i> (<code class="text-[8px] bg-slate-100 px-1 rounded text-indigo-700">dbz_publication</code>) di PostgreSQL secara eksplisit sebelum konektor berjalan.
-</p>
-</div>
-</div>
-
-<!-- Card 4: Resilient Restart -->
-<div class="ref-card p-3.5 flex flex-col justify-between relative border-t-2 border-t-amber-500 bg-white rounded-xl shadow-sm border border-slate-200">
-<div class="flex justify-between items-center mb-2">
-<span class="text-[8px] font-mono font-bold uppercase text-slate-400">System Reliability</span>
-<span class="text-[8px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-100">Fault Tolerant</span>
-</div>
-<div>
-<div class="text-xs font-bold text-slate-800 flex items-center gap-1">
-  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Resilient Restart
-</div>
-<p class="text-[9.5px] text-slate-500 mt-1 leading-normal">
-Implementasi <i>smart wait loop</i> dan pengecekan konektivitas saat container PostgreSQL dimuat ulang untuk mengaktifkan sinkronisasi <i>wal_level</i>.
-</p>
-</div>
-</div>
-
-</div>
-
-</div>
+<div class="absolute bottom-3 left-10 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400">AUDITCHAIN · PROGRESS</div>
+<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">02 / 07</div>
