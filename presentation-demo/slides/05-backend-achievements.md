@@ -13,5 +13,5 @@ transition: slide-left
   <div class="mt-3 rounded-2xl bg-[#071629] px-5 py-3 text-white"><span class="text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-300">Analogi:</span><span class="ml-2 text-xs">seperti mencocokkan barang dengan struk belanja paling baru.</span></div>
 </div>
 <div class="absolute bottom-3 left-10 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400">AUDITCHAIN · BACKEND</div>
-<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">04 / 07</div>
+<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">06 / 10</div>
 

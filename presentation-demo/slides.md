@@ -18,11 +18,15 @@ src: ./slides/06-dashboard-ui.md
 ---
 
 ---
-src: ./slides/05-backend-achievements.md
+src: ./slides/02-log-process-explainer.md
 ---
 
 ---
-src: ./slides/07-roadmap-blockers.md
+src: ./slides/03-audit-log-explainer.md
+---
+
+---
+src: ./slides/12-offchain-recovery-plan.md
 ---
 
 ---

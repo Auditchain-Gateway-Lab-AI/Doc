@@ -43,4 +43,4 @@ transition: fade-out
   </div>
 </div>
 <div class="absolute bottom-3 left-10 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400">AUDITCHAIN · PROGRESS</div>
-<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">02 / 07</div>
+<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">02 / 08</div>

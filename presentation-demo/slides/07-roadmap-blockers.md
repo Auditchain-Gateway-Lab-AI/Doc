@@ -34,4 +34,4 @@ transition: slide-left
   </div>
 </div>
 <div class="absolute bottom-3 left-10 text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-400">AUDITCHAIN · BACKEND</div>
-<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">05 / 07</div>
+<div class="absolute bottom-3 right-10 text-[9px] font-mono text-slate-400">07 / 10</div>
