@@ -5,7 +5,7 @@ lineNumbers: false
 colorSchema: light
 transition: slide-left
 aspectRatio: 16/9
-title: AuditChain Progress — 2 Oktober 2026
+title: AuditChain Progress — 6 Oktober 2026
 src: ./slides/cover.md
 ---
 

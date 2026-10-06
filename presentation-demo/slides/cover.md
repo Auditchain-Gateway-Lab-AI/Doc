@@ -12,7 +12,7 @@ transition: fade-out
       <img src="/auditchain-logo.png" alt="Logo AuditChain" class="h-10 w-10 rounded-xl object-cover" />
       <div><div class="text-sm font-bold tracking-wide">AuditChain</div><div class="text-[9px] uppercase tracking-[0.24em] text-slate-400">Progress Update</div></div>
     </div>
-    <div class="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-200">2 Oktober 2026</div>
+    <div class="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-emerald-200">6 Oktober 2026</div>
   </div>
   <div class="relative max-w-4xl py-10">
     <div class="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-300">Client Portal & Data Recovery</div>

@@ -10,8 +10,8 @@ transition: slide-left
   </div>
   <div class="mt-2 grid grid-cols-12 items-start gap-3">
     <div class="col-span-7">
-      <div class="overflow-hidden rounded-2xl border border-slate-200 bg-[#071629] p-1.5 shadow-lg"><ZoomImage src="/client-monitor.png" alt="Tampilan Monitor pada AuditChain Client Portal" preview-class="mx-auto block max-h-[320px] w-full rounded-xl object-contain" /></div>
-      <div class="mt-1 flex items-center justify-between text-[9px] text-slate-500"><span>Monitor · klik gambar untuk perbesar</span><span class="rounded-full bg-amber-50 px-2 py-1 font-semibold text-amber-800">Data pada screenshot adalah demo</span></div>
+      <div class="overflow-hidden rounded-2xl border border-slate-200 bg-[#071629] p-1.5 shadow-lg"><ZoomImage src="/client-monitor-new.png" alt="Tampilan Monitor terbaru pada AuditChain Client Portal" preview-class="mx-auto block max-h-[320px] w-full rounded-xl object-contain" /></div>
+      <div class="mt-1 flex items-center justify-between text-[9px] text-slate-500"><span>Monitor · klik gambar untuk perbesar</span><span class="rounded-full bg-emerald-50 px-2 py-1 font-semibold text-emerald-800">Screenshot terbaru dari Client Portal</span></div>
     </div>
     <div class="col-span-5 space-y-2">
       <div class="rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
